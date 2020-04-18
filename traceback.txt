@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 26, in script
+    $ player_name = renpy.input("My name is . . .", default=getRandomName())
+  File "game/script.rpy", line 26, in <module>
+    $ player_name = renpy.input("My name is . . .", default=getRandomName())
+NameError: name 'getRandomName' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 26, in script
+    $ player_name = renpy.input("My name is . . .", default=getRandomName())
+  File "/Users/guri/Projects/renpy/renpy/ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/guri/Projects/renpy/renpy/python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 26, in <module>
+    $ player_name = renpy.input("My name is . . .", default=getRandomName())
+NameError: name 'getRandomName' is not defined
+
+Darwin-19.3.0-x86_64-i386-64bit
+Ren'Py 7.3.5.606
+LD46 1.0
+Fri Apr 17 22:58:22 2020

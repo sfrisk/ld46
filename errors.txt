@@ -1,0 +1,18 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 59: expected ':' not found.
+    label romance_a
+                   ^
+
+File "game/script.rpy", line 68: expected ':' not found.
+    label romance_b
+                   ^
+
+File "game/script.rpy", line 79: expected ':' not found.
+    label ending
+                ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Sat Apr 18 00:05:31 2020
