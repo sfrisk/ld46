@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 114: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        romanceB "Well, I’d like to see it as a functional space. Where you can sit, and read or have a nice cup of tea in the morning.
+File "game/travelingScript.rpy", line 36: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Hmm, do you have any books about the historic gardens from around here?"
+                                                                             ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Apr 18 10:41:17 2020
+Sat Apr 18 15:30:12 2020
