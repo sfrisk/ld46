@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/travelingScript.rpy", line 30: choice menuitem expects a non-empty block.
-    "I’m looking for the original blueprints of the manor house.":
-                                                                  ^
+File "game/society.rpy", line 56: reached end of line when expecting ':'.
+    if ghost == False
+                     ^
+
+File "game/society.rpy", line 58: expected statement.
+    else
+        ^
+
+File "game/society.rpy", line 83: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Truth"
+           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Apr 18 20:25:05 2020
+Sun Apr 19 19:49:20 2020

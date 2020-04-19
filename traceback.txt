@@ -1,20 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 145, in script
-    romanceA "%(player_name)s? %(capitalize_prounoun)s seems pretty cool."
-Exception: Sayer romanceA is not a function or string.
+  File "game/travel.rpy", line 16, in script
+    if week 2 and haveGardenCard == False:
+SyntaxError: invalid syntax (travel.rpy, line 16)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 145, in script
-    romanceA "%(player_name)s? %(capitalize_prounoun)s seems pretty cool."
-  File "/Users/guri/Projects/renpy/renpy/ast.py", line 685, in execute
-    raise Exception("Sayer %s is not a function or string." % self.who.encode("utf-8"))
-Exception: Sayer romanceA is not a function or string.
+  File "game/travel.rpy", line 16, in script
+    if week 2 and haveGardenCard == False:
+  File "/Users/guri/Projects/renpy/renpy/ast.py", line 1832, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/guri/Projects/renpy/renpy/python.py", line 2057, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Users/guri/Projects/renpy/renpy/python.py", line 692, in py_compile
+    raise e
+SyntaxError: invalid syntax (travel.rpy, line 16)
 
 Darwin-19.3.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 LD46 1.0
-Sat Apr 18 10:44:19 2020
+Sun Apr 19 19:26:15 2020

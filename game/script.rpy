@@ -155,7 +155,7 @@ label romance_a:
     show newsAnchor happy
     $ capitalize_prounoun = subject_pronoun.capitalize()
     newsAnchor "%(player_name)s? %(capitalize_prounoun)s seems pretty cool."
-    jump traveling
+    jump startWeek1
 
 label romance_b:
     "And so Romance A and I began working together on the garden project"
@@ -163,7 +163,7 @@ label romance_b:
     show b happy
     $ capitalize_prounoun = subject_pronoun.capitalize()
     bookstoreOwner "%(player_name)s? %(capitalize_prounoun)s seems pretty cool."
-    jump traveling
+    jump startWeek1
 
 
 
