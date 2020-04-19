@@ -75,17 +75,20 @@ label start:
     "One was a man wearing a well fitted suit.  I think I've seen hi on TV before"
     hide newsAnchor
 
-    show bookstoreOwner
+    show b
     "A woman sat in the corner, a book in her hand. She looked up as my boss and I came into the room."
-    hide bookstoreOwner
+    hide b
 
     show boss
     boss "Lastly, I wanted to introduce you to %(player_name)s, our new building manager. %(player_name)s comes to us from a rather famous estate museum and gardens. I hope you will all make %(object_pronoun)s feel welcome at Elmhearst."
-    
+    hide boss
+
     neighbor1 "Hey"
     newsAnchor "Hey there"
     neighbor2 "Hi"
-    bookstoreOwner "Greetings"
+    show b
+    bookstoreOwner "Greetings!"
+    hide b
 
     boss "Why don’t you tell us what you’d like to see with the courtyard?"
     hide boss
@@ -112,19 +115,26 @@ label start:
     protag "How about you? What do you want to see?"
     hide protag
 
-    show bookstoreOwner
+    show b
     bookstoreOwner "Well, I’d like to see it as a functional space. Where you can sit, and read or have a nice cup of tea in the morning."
-
     menu:
         "That sounds awesome!":
+            hide b
+            show b happy
+            bookstoreOwner "Glad you like my idea!"
             $ friendshipB = friendshipB + 1
             $ romanceB = romanceB + 2
         "That sounds interesting!":
             $ friendshipB = friendshipB + 1
+            bookstoreOwner "I thought it sounded cool."
         "That sounds out of place for this space.":
+            hide b
+            show b sad
             $ friendshipB = friendshipB - 2
             $ romanceB = romanceB - 2
-    hide bookstoreOwner
+            bookstoreOwner "Well you didn't need to be so rude"
+
+    hide b
    
     show Boss
     boss "I’m sure you’ll have plenty of ideas once you really get your hands in there."
@@ -150,7 +160,7 @@ label romance_a:
 label romance_b:
     "And so Romance A and I began working together on the garden project"
     hide protag happy
-    show bookstoreOwner happy
+    show b happy
     $ capitalize_prounoun = subject_pronoun.capitalize()
     bookstoreOwner "%(player_name)s? %(capitalize_prounoun)s seems pretty cool."
     jump traveling

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/travelingScript.rpy", line 36: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Hmm, do you have any books about the historic gardens from around here?"
-                                                                             ^
+File "game/travelingScript.rpy", line 30: choice menuitem expects a non-empty block.
+    "I’m looking for the original blueprints of the manor house.":
+                                                                  ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Apr 18 15:30:12 2020
+Sat Apr 18 20:25:05 2020

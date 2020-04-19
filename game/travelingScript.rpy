@@ -1,5 +1,5 @@
-define librarian = Character("Librarian")
-define shopOwner = Character("Owner")
+define librarian = Character("Libby Corso")
+define shopOwner = Character("Cam Webber")
 define president = Character("President")
 
 label traveling:
@@ -14,7 +14,36 @@ label traveling:
       jump society
 
 label library:
-  "we went to the library, the end"
+  scene bg library
+  show librarian
+  librarian "Welcome to the Oakglen Public Library! How can I direct you?"
+  protag "Hello, I’m looking for some information on Elmhearst Manor."
+  show librarian happy
+  librarian "Oh, what a lovely house!"
+  hide librarian happy
+  show librarian sad
+  librarian "It’s so upsetting they decided to turn it into apartments, but I suppose it couldn’t be helped."
+  hide librarian sad
+  show librarian
+  librarian "What sorts of information would you like, dear?"
+  menu:
+    "I’m looking for the original blueprints of the manor house.":
+      $ choice = 'blueprints'
+    "I’m looking for any books about Miss Grimalli’s gardens.":
+      $ choice = 'books'
+  librarian "I can help you find that. Please follow me."
+  librarian "I’m Libby Corso, the town librarian and unofficial historian."
+  librarian "I often have to track down books for that nice young lady that lives in Elmhearst and works at the book store. She’s been talking about writing a book about Renalda for ages. Always wants to see the old deeds and records around town"
+  hide librarian
+  show librarian happy
+  librarian "It’s so nice to see young people interested in the history of a place. "
+  protag "Oh, Molly never mentioned that. How close were you with Miss Grimalli?"
+  hide librarian happy
+  show librarian
+  librarian "Oh heavens, not at all, she and I kept to different circles. She was a very important person in town so of course we all knew of her. "
+  protag "I see. Well, here’s the section I was looking for."
+  librarian "Please let me know if there’s anything else I can help you find. "
+  "That’s odd. Who calls someone by their first name when they aren’t acquainted? And Molly never told me she was writing a book. I guess it makes sense though, she loves books. I’d better get going."
   return
 
 label shop:
