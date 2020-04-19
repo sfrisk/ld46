@@ -1,6 +1,6 @@
-define librarian = Character("Libby")
-define shopOwner = Character("Cam")
-define prez = Character("Lucinda")
+define librarian = Character("Libby", color="#8d7db3")
+define cam = Character("Cam")
+define prez = Character("Lucinda", color="#00b6b9")
 
 label traveling:
   scene bg townMap
@@ -50,26 +50,41 @@ label shop:
   scene bg gardenStoreExterior
   "So I decided to check out the store, Blooms and Boughs, the local garden shop"
   scene bg gardenStoreInterior
-  show shopOwner happy
-  shopOwner "Hello, welcome to Blooms and Boughs, how can I help you?"
+  show cam happy
+  cam "Hello, welcome to Blooms and Boughs, how can I help you?"
   menu:
     "Gardening Tools":
       protag  "I’m looking for some tools to help me pull out some old flower beds and containers."
     "Information":
       protag "I’m looking for some information about local flora to help replant a historic garden."
-  shopOwner "I think I have just the thing. You must be the new building manager over at the Elmhearst."
-  shopOwner "I’m Cam Webber, the owner here. Your boss stirred up the town when he bought that place. It looks like the grounds are in pretty good shape though."
+  hide cam happy
+  show cam
+  cam "I think I have just the thing. You must be the new building manager over at the Elmhearst."
+  hide cam
+  show cam happy
+  cam "I’m Cam Webber, the owner here. Your boss stirred up the town when he bought that place. It looks like the grounds are in pretty good shape though."
   protag "How did you know who I was?"
-  shopOwner "Sorry, gossip travels fast when one of the people in your building is a news anchor."
-  shopOwner "It’s not bad, though. We’ve been waiting for you to get here. Just excitement really. Well, here are the tools and the books about our local climate."
-  shopOwner "Let me know if you need anymore help."
+  hide cam happy
+  show cam sad
+  cam "Sorry, gossip travels fast when one of the people in your building is a news anchor."
+  hide cam sad
+  show cam happy
+  cam "It’s not bad, though. We’ve been waiting for you to get here. Just excitement really. Well, here are the tools and the books about our local climate."
+  hide cam happy
+  show cam
+  cam "Let me know if you need anymore help."
   menu:
     "I think I see what I need":
-      shopOwner "Great, just pick out what you want and I’ll have everything sent over to the manor."
+      hide cam
+      show cam happy
+      cam "Great, just pick out what you want and I’ll have everything sent over to the manor."
     "Hmm, do you have any books about the historic gardens from around here?":
-      shopOwner "Sorry, I don’t. You could check the library. Or you could go talk to the Garden Society. I think the lady who built that house founded it or something. Here’s the card for their President."
-  shopOwner "Thank you for stopping by! See you again soon!"
-  
+      hide cam
+      show cam sad
+      cam "Sorry, I don’t. You could check the library. Or you could go talk to the Garden Society. I think the lady who built that house founded it or something. Here’s the card for their President."
+  show cam happy
+  cam "Thank you for stopping by! See you again soon!"
+  hide cam happy
   "I didn’t expect to cause a stir coming here. It’s strange to be known before you introduce yourself but it looks like everyone in town keeps an eye on each other."
   "I guess I better figure out who I want to see about the gardens this week. There’s so much work to be done."
   return
@@ -105,9 +120,11 @@ label society:
   prez "But I disgress, you wanted help with the gardens."
   prez "Here. Renalda kept meticulous notes when the house was being built. You can have her construction notes and letters to the builders. I hope they serve you well."
   protag "Thank you. Cam at Blooms and Boughs said that Miss Grimalli founded the Garden Society in Oakglen? "
-  prez "It’s true. She had the great ability to bring people close to her and make them feel special."
   hide prez
-  show prez annoyed 
+  show prez happy
+  prez "It’s true. She had the great ability to bring people close to her and make them feel special."
+  hide prez happy
+  show prez annoyed
   prez "She was our elder and we mourned her passing deeply. We had hoped that she would leave Elmhearst to us so that we would have a permanent home but we were forced to turn to other avenues."
   hide prez annoyed
   show prez mad
