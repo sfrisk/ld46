@@ -36,3 +36,36 @@ label douglas2:
     "talk to Ted":
       $ weekTwoTed = True
       jump ted2
+
+label douglas3:
+  scene bg manor
+  show douglas
+  douglas "Hey protag. What's up with this lily?"
+  menu:
+    "Renalda's work":
+      protag "It was something Renalda was working on"
+    "Rare discovery":
+      protag "It's some sort of rare variety I've never seen before"
+  douglas "Tell me more, tell me more"
+  if ghost == True:
+    jump douglas3ghost
+  jump douglas3noGhost
+
+label douglas3ghost:
+  protag "Protag shows him altar and book."
+  hide douglas
+  show douglas mad
+  douglas "Douglas is angry, reveals Renalda is aunt. Family wants to hide her pagan ties to ensure a positive legacy."
+  protag "Protag is defiant and supportive of Renalda. Tells Douglas that she gave up a child to save family shame."
+  douglas "TELL ME MORE"
+  protag "STALLS FOR TIME. NEED MORE INFO"
+  jump shop3
+
+label douglas3noGhost:
+  protag "Protag shows him hot house and fountains. Tell him he needs a new pump."
+  hide douglas
+  show douglas happy
+  douglas "Douglas is happy, reveals Renalda is aunt. Family wants to assure her legacy."
+  protag "Protag is happy to help but flower is not blooming yet."
+  douglas "Douglas thinks he might have an answer and says he will be back."
+  jump shop3

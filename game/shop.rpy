@@ -72,6 +72,39 @@ label shop3:
   $ shopVisits = 2
   scene bg shop
   show cam
-  "AVO BEAR HIMSELF, CAM, BACK FOR WEEK 3"
+  protag "Hey cam! What do you have for modern pump systems?"
+  cam "Cam says can have one ordered to fit. Might need to come see the setup so they get the right connections."
+  protag "That works, you're welcome to come over to Elmhearst whenever."
   hide cam
+  show cam happy
+  cam "That's great! I've always dreamed of seeing Elmhearst up close."
+  protag "You have? Why didn't you apply for the building super job?"
+  hide cam happy
+  show cam sad
+  cam "I did, but I wasn't chosen."
+  hide cam sad
+  show cam happy
+  cam "But I'm glad you got the job. It's been great talking to you."
+  cam "Can I get you anything else?"
+  if ghost == True:
+     menu:
+      "Something for the Alter":
+        protag "I was looking for some herbs to compliment the alter in the courtyard."
+      "Tools and Pots":
+        protag "Tools to help transplant plants and some pots please!"
+  else:
+    menu:
+      "Something for the Fountain":
+        protag "I was looking for some flowers to compliment the fountain in the courtyard."
+      "Tools and Pots":
+        protag "Tools to help transplant plants and some pots please!"
+  
+  hide cam happy
+  show cam
+  cam "Can do! Here ya go!"
+  protag "Thanks, Cam, have a nice day!"
+  hide cam
+  show cam happy
+  cam "Thanks you too!"
+  hide cam happy
   jump travel

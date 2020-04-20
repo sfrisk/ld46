@@ -34,12 +34,15 @@ label library1:
   jump travel
 
 label library2:
-  $ libraryVisits = 2
+  $ libraryVisits = libraryVisits + 1
   scene bg library
   show librarian
-  "VISITING THE LIBRARY FOR THE 2ND TIME"
-  protag "Protag greets Libby. Asks to keep blueprints longer."
-  librarian "Libby asks about garden"
+  if libraryVisits == 1:
+    librarian "Welcome to the Oakglen Public Library! How can I direct you?"
+    protag "Hello, I’m looking for some information on Elmhearst Manor."
+  else:
+    protag "Protag greets Libby. Asks to keep blueprints longer."
+    librarian "Libby asks about garden"
   menu:
     "Terrarium":
       $ photoAlbum = True
@@ -68,9 +71,34 @@ label library2:
   jump travel
 
 label library3:
-  $ libraryVisits = 3
+  $ libraryVisits = libraryVisits + 1
   scene bg library
   show librarian
-  "VISITING THE LIBRARY FOR THE 3RD TIME"
+  librarian "Greets protag"
+  protag "Ask about hot house daylilies"
+  hide librarian
+  show librarian sad
+  librarian "I am puzzled."
+  protag "Protag explains the setup, terrarium is a hot house for a rare flower and looks like center of a strange display."
+  hide librarian sad
+  show librarian
+  librarian "Libby thinks that you’ve been spending too much time with Molly."
+  protag "Protag wants to know why Libby seems upset."
+  hide librarian
+  show librarian sad
+  librarian "Libby reveals town history is steeped in witchcraft. Now witches come here and meddle in people’s lives."
+  menu:
+    "Apologize":
+      "Wow, this seems to have really upset Libby. I should probably apologize."
+      protag "I'm sorry if I upset you."
+    "???":
+      ".... well this is weiiird"
+  hide librarian sad
+  show librarian
+  librarian "Never you mind dear."
+  librarian "Libby fetches protag a book on the town charter and history and one on water loving plants."
+  protag "Protag notices Renalda’s name on a book return slip inside."
+  if libraryVisits == 3:
+    "Protag leaves (If visited Libby 3 times, finds a will that leaves Elmhearst to POGS)"
   hide librarian
   jump travel

@@ -19,16 +19,16 @@ label travel:
   menu:
     "Where do I want to go ?"
     "Town Library":
-      if libraryVisits == 0:
+      if week == 1:
         jump library1
-      if libraryVisits == 1:
+      if week == 2:
         jump library2
-      if libraryVisits == 2:
+      if week == 3:
         jump library3
     "Garden Society":
-      if societyVisits == 0:
+      if week == 1:
         jump society1
-      if societyVisits == 1:
+      if week == 2:
         jump society2
-      if societyVisits == 2:
+      if week == 3:
         jump society3

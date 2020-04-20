@@ -93,6 +93,37 @@ label society3:
   $ societyVisits = 3
   scene bg parlor
   show prez
-  "WEEK THREE OF VISITING LUCINDA"
-  hide prez
+  prez "Hello, %(player_name)s!"
+  protag "Hey, Lucy!"
+  protag "Protag reveals the letters between Lucy and Renalda in the stack."
+  prez "Lucy confesses that Renalda was the Elder of their coven.  Lucy is HP, and pseudo daughter to Renalda. Renalda was supposed to leave Elmhearst to the GS to be their home but will disappeared."
+  protag "Protag apologizes. Reveals that Douglas is Renalda’s nephew."
+  prez "Lucy already knew. Renalda had been close to his mother until she became a witch then, it tore the family apart. That’s when Renalda changed the will but Lucy can’t prove it."
+  menu:
+    "Support Lucy":
+      hide prez
+      show prez happy
+      prez "Lucy is happy, provides last packet of letters"
+      protag "Reveal books/notes"
+      hide prez happy
+    "Defend Douglas":
+      hide prez
+      show prez mad
+      prez "Lucy is angry, but provides last packet of letters"
+      protag "Reveal books/notes"
+      hide prez mad
+  show prez
+  prez "PLEASE Give them to me"
+  menu:
+    "Agree":
+      hide prez
+      show prez happy
+      prez "I'm glad you're willing to help"
+      protag "Let's go!"
+      hide prez happy
+    "Ask Donald":
+      show prez annoyed
+      prez "If you feel that is best"
+      protag "Let's go!"
+      hide prez annoyed
   jump travel

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/ted.rpy", line 72: reached end of line when expecting ':'.
-    if weekTwoTed == True
-                         ^
+File "game/society.rpy", line 125: expected statement.
+    how prez annoyed
+                    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Apr 19 20:52:49 2020
+Mon Apr 20 17:57:25 2020
