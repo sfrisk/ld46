@@ -1,26 +1,7 @@
-define librarian = Character("Libby", color="#8d7db3")
-define cam = Character("Cam", color="#7b9f2d")
-define prez = Character("Lucinda", color="#00b6b9")
-
 label startWeek1:
   $ week = 1
   $ errands = 1
-  $ libraryVisits = 0
-  $ societyVisits = 0
-  $ shopVisits = 0
-  $ isHorticulturist = False
-  $ growLight = False
-  $ terrariumTools = False
-  $ terrariumPlants = False
-  $ terrariumKey = False
-  $ personalLetters = False
-  $ photoAlbum = False
-  $ fountainBook = False
-  $ ghost = False
-
-  "Protag talks to Ted"
-  "Protag talks to Molly"
-  jump shop1
+  jump ted1
 
 label endWeek1:
   scene bg courtyard

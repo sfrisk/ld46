@@ -2,17 +2,13 @@ label startWeek2:
   $ errands = 1
   $ week = 2
   $ weekTwoTed = False
+  $ weekTwoFlirt = False
   $ weekTwoMolly = False
   "WEEK 2 BABY"
-  "Talk to Boss"
-  "Sees Ted doing a thing. Sees molly doing a different thing"
-  menu:
-    "talk to molly":
-      "this will trigger talking to Molly when she's mapped out"
-      $ weekTwoMolly = True
-    "talk to Ted":
-      "this will trigger talking to Ted when he's mapped out"
-      $ weekTwoTed = True
+  jump douglas2
+
+label startWeek2AfterTalk:
+  "Well that was fun. Best get to work. Let's see what Cam has for me today."
   jump shop2
 
 label endWeek2:
@@ -21,9 +17,13 @@ label endWeek2:
     "Renalda shows ritual altar behind terrarium wall. Garden looks more witchy"
   else:
     "Plumbing problem found, central fountain works. Garden look historic."
+  if weekTwoFlirt == True:
+    "Terrarium Bloooooomed!"
   if weekTwoTed == True:
-    "Molly shows up for a convo"
+    jump molly2
   else:
     "ted shows up for a convo"
+
+label endWeek2AfterTalk:
   "end week 2"
   jump startWeek3

@@ -14,7 +14,7 @@ label travel:
     "Cam did mention a Garden Society. [some ideas about garden society]"
     "Or I could go to the library [some ideas about library stuff]"
   if week == 2 and haveGardenCard == False:
-    "[need a trigger to check out garden]"
+    "Molly gave me some info about a Gardening Society. I should check them out."
   $ errands = 0
   menu:
     "Where do I want to go ?"

@@ -1,7 +1,6 @@
 
 label shop1:
   $ shopVisits = 1
-  $ haveGardenCard = False
   scene bg gardenStoreExterior
   "So I decided to check out the store, Blooms and Boughs, the local garden shop"
   scene bg gardenStoreInterior

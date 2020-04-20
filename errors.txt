@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/society.rpy", line 56: reached end of line when expecting ':'.
-    if ghost == False
-                     ^
-
-File "game/society.rpy", line 58: expected statement.
-    else
-        ^
-
-File "game/society.rpy", line 83: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Truth"
-           ^
+File "game/ted.rpy", line 72: reached end of line when expecting ':'.
+    if weekTwoTed == True
+                         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Apr 19 19:49:20 2020
+Sun Apr 19 20:52:49 2020
