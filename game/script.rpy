@@ -16,7 +16,7 @@ define prez = Character("Lucinda", color="#00b6b9")
 # The game starts here.
 
 label start:
-
+    scene bg manor
     $ friendshipTed = 0
     $ friendshipMolly = 0
     $ romanceTed = 0
@@ -65,7 +65,7 @@ label start:
             $ reflexive_pronoun = 'themself'
     protag "My prefered pronouns are '%(subject_pronoun)s/%(object_pronoun)s'"
 
-    scene bg exteriorElmherst
+    scene bg manor
 
     show douglas
     douglas "Welcome to The Elmhearst." 
@@ -74,14 +74,10 @@ label start:
     douglas "Rumors about the things she used to do here have tempted ghost hunters and occult nuts to comb over the grounds for years."
     douglas "No one’s ever found anything but that never stopped them. At least until I got the fences mended."
 
-    scene bg interiorElmherst
-    show douglas
-
     douglas "I’ve spent a small fortune to turn this old estate into luxurious apartments."
     douglas "My previous building manager did what they could with the grounds as you can tell but the inner garden in the courtyard was just too much for them. Everything they tried just withered. "
     douglas "I can’t have the entire heart of the manor look like a scraggly dying mess. The residents have tried, I’ve tried. I’m at my wit’s end. Just...keep it alive."
     
-    scene bg commonRoom
     "We entered the couryard of Elmhearst where a handful of building residences were already waiting for the meeing to start"
     
     show ted

@@ -1,9 +1,8 @@
 
 label shop1:
   $ shopVisits = 1
-  scene bg gardenStoreExterior
+  scene bg shop
   "So I decided to check out the store, Blooms and Boughs, the local garden shop"
-  scene bg gardenStoreInterior
   show cam happy
   cam "Hello, welcome to Blooms and Boughs, how can I help you?"
   menu:
@@ -46,7 +45,7 @@ label shop1:
 
 label shop2:
   $ shopVisits = 2
-  scene bg gardenStoreInterior
+  scene bg shop
   show cam
   "AVO BEAR HIMSELF, CAM, BACK FOR WEEK 2"
   if isHorticulturist == True:
@@ -71,7 +70,7 @@ label shop2:
 
 label shop3:
   $ shopVisits = 2
-  scene bg gardenStoreInterior
+  scene bg shop
   show cam
   "AVO BEAR HIMSELF, CAM, BACK FOR WEEK 3"
   hide cam

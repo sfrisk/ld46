@@ -1,8 +1,10 @@
 label douglas1:
+  scene bg manor
+
   "Week one douglas stuff?"
 
 label douglas2:
-  scene bg courtyard
+  scene bg manor
   show douglas
   protag "Oh, hey Douglas! How's it going today?"
   douglas "Gives an answer"

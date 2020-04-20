@@ -1,5 +1,5 @@
 label molly1:
-  scene bg courtyard
+  scene bg manor
   show molly
   "I see molly"
   protag "Ask Molly a question"
@@ -43,7 +43,7 @@ label molly1:
   jump shop1
 
 label molly2:
-  scene bg courtyard
+  scene bg manor
   show molly
   protag "HEY Molly, my gurl in yellow!"
   molly "This is weird placeholder dialog. How are you adjusting to the new town?"

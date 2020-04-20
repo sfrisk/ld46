@@ -4,6 +4,7 @@ label startWeek2:
   $ weekTwoTed = False
   $ weekTwoFlirt = False
   $ weekTwoMolly = False
+  scene bg manor
   "WEEK 2 BABY"
   jump douglas2
 
@@ -12,6 +13,7 @@ label startWeek2AfterTalk:
   jump shop2
 
 label endWeek2:
+  scene bg manor
   "Interact in Garden ⅔ cleared now, new plants in places."
   if ghost == True:
     "Renalda shows ritual altar behind terrarium wall. Garden looks more witchy"
@@ -25,5 +27,6 @@ label endWeek2:
     "ted shows up for a convo"
 
 label endWeek2AfterTalk:
+  scene bg manor
   "end week 2"
   jump startWeek3

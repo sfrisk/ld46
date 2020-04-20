@@ -4,7 +4,7 @@ label startWeek1:
   jump ted1
 
 label endWeek1:
-  scene bg courtyard
+  scene bg manor
   if societyVisits == 1:
     $ ghost = True
     "Protag reads letters in courtyard."

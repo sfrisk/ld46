@@ -1,5 +1,5 @@
 label ted1:
-  scene bg courtyard
+  scene bg manor
   show ted
   ted "Good morning, %(player_name)s! It’s a lovely day, isn’t it?"
   protag "Yeah, it’s been a good day for gardening so far."
@@ -39,7 +39,7 @@ label ted1:
 
 
 label ted2:
-  scene bg courtyard
+  scene bg manor
   show ted
   ted "Hey, %(player_name)s!"
   protag "Hi, Ted, I really enoyed your [recent broadcast]"
