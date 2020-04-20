@@ -6,34 +6,56 @@ label douglas1:
 label douglas2:
   scene bg manor
   show douglas
-  protag "Oh, hey Douglas! How's it going today?"
-  douglas "Gives an answer"
-  douglas "How goes the progress on the courtyard?"
-  protag "I was wondering if you had keys for the courtyard?"
-  douglas "Why do you need additional keys for the courtyard?"
+  protag " Good morning Douglas, how are you this morning?"
+  douglas "Morning %(player_name)s."
+  hide douglas
+  show douglas happy
+  douglas "I must say, the progress you have made in just a week is inspiring."
+  douglas "Everything is getting organized and pruned. It’s like a new space already. Is there anything I can assist with?"
+  protag "Thank you! It’s been very rewarding so far."
+  protag ". . ."
+  protag "I guess the only thing I can think of is if you have any more keys you might be hanging on to."
+  hide douglas happy
+  show douglas
+  douglas "Keys? I gave you a master to the house, that should open any door you need."
   menu:
     "Tell him about the terrarium":
-      protag "I found a terrarium in there last night, but it's locked up."
-      douglas "A response about the terrarium"
+      protag "Oh no, it’s not for a door per say. There’s an old terrarium build into the back wall and I wanted to open the case. It’s a small antique lock."
     "Tell him about old plumbing line access":
-      protag "I found an old plumbing line access and wanted to see where it went."
-      douglas "A response to this."
-  douglas "Well, I do have this old skeleton key, if you're interested."
-  "Well that key LOOKS like it would work."
+      protag "Oh, it’s not for a door per say. There’s a small door blocking access to some of the old plumbing in there. It’s a small antique looking lock."
+  "Douglas pulls out a small black key and hands it to me."
+  douglas "Here, this is a skeleton key. It might open that. Can’t hurt."
   "RING RING"
+  "Douglas' phone starts ringing"
+  hide douglas
+  show douglas mad
   douglas "I'm sorry, I must get this. We'll talk later, but for now here is more funds for courtyard"
+  hide douglas mad
+  show douglas
   douglas "Yes? This is Douglas speaking . . ."
   hide douglas
-  "Oo, more funds? I could definitely use this on the terrarium!"
-  "As I sit there thinking about all the things I could get with the extra funds, I see Ted and Molly entering the courtyard from different directions."
-  "Describe Molly"
-  "Describe Ted"
+  "Douglas wanders off, and I don't hear any more of the call."
+  protag "I should try using this key."
+  "I wander over to the terrarium to see if the key will help. It opens the plumbing acces, but unfortunately won't open the terrarium."
+  protag "Well, that’s at least one question solved."
+  "Ding!"
+  "Huh, someone is texting me."
+  "I check my phone and see a text message from Cam."
+  cam "Douglas just stopped by and upped your budget for the garden. Swing by for some deals."
+  protag "Ooo, more money for plants? Excellent! Maybe I can find something for the terrarium."
+  "I'm about to head out, when I see Ted and Molly across the courtyard."
+  show ted:
+    xalign 0.15
+    yalign 1.0
+  show molly:
+    xalign 0.85
+    yalign 1.0
   "I have some time, I should say hello to one of them."
   menu:
-    "talk to molly":
+    "Molly":
       $ weekTwoMolly = True
       jump molly2
-    "talk to Ted":
+    "Ted":
       $ weekTwoTed = True
       jump ted2
 

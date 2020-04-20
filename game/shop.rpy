@@ -12,7 +12,7 @@ label shop1:
       protag "I’m looking for some information about local flora to help replant a historic garden."
   hide cam happy
   show cam
-  cam "I think I have just the thing. You must be the new building manager over at the Elmhearst."
+  cam "I think I have just the thing. You must be the new building manager over at the Elmhearst. The name is %(player_name)s, right?"
   hide cam
   show cam happy
   cam "I’m Cam Webber, the owner here. Your boss stirred up the town when he bought that place. It looks like the grounds are in pretty good shape though."
@@ -46,25 +46,54 @@ label shop1:
 label shop2:
   $ shopVisits = 2
   scene bg shop
-  show cam
-  "AVO BEAR HIMSELF, CAM, BACK FOR WEEK 2"
+  show cam happy
+  cam "Welcome to Blooms and ..oh, it’s you! Hi, %(player_name)s!"
   if isHorticulturist == True:
-    "Cam horticulturist bkgd"
-    "Cam sells special grow light"
-  else:
-    cam "HEY FRIEND. HOW CAN I HELPS?"
     menu:
-      "Terrarium Tools":
-        $ terrariumTools = True
-      "Terrarium Plants":
-        $ terrariumPlants = True
-    cam "I KNOW LOTS ABOUT TERRARIUMS!"
-    if terrariumTools == True:
-      "I buy some tools"
-    else:
-      "I buy some plants"
-  protag "I need to get back to the garden."
-  "Cam wonders what exactly Protag found."
+      "Soil":
+        protag "Hi Cam, do you happen to carry cactus soil for terrariums?"
+        jump shop2plants
+      "Plants":
+        protag "Hi Cam, do you happen to carry succulents for display in terrariums?"
+        jump shop2plants
+      "Advice":
+        jump shop2horticulturist
+  else:
+    menu:
+      "Soil":
+        protag "Hi Cam, do you happen to carry cactus soil for terrariums?"
+        jump shop2plants
+      "Plants":
+        protag "Hi Cam, do you happen to carry succulents for display in terrariums?"
+        jump shop2plants
+
+label shop2plants:
+  cam "Of course, I have a whole section dedicated to them right over here. Don’t discount that terrariums can be water systems too."
+  "I look through the terrarium section and pick out a few things"
+  jump shop2end
+
+label shop2horticulturist:
+  protag "Hi Cam, I’m looking for some professional advice."
+  protag "I’ve found an odd looking grow cage in the back of the courtyard but I can’t figure out why you’d seal what looks like a lilium variety in there."
+  protag "Are you a horticulturalist or know one?"
+  hide cam
+  show cam happy
+  cam "Finally, I spent 6 years at Cornell so I could say this:"
+  cam "Hi, I’m Dr. Cameron Webber, PhD in Horticulture."
+  cam "*chuckled*"
+  hide cam happy
+  show cam
+  cam "As for your little question, some daylilies can tolerate different climes so I think you might be surprised at what you find."
+  cam "Either way, you’re probably gonna need a better grow light to get anything back there."
+  "Cam shows me a grow light that should be able to do the trick. I buy it."
+  jump shop2end
+
+label shop2end:
+  protag "Well, thanks Cam! I gotta get running!"
+  cam "No problem, %(player_name)s! See you soon."
+  "I head out with my purchases in hand, excited for the work ahead."
+  cam ". . ."
+  cam "I wonder what %(subject_pronoun)s found."
   hide cam
   jump travel
 

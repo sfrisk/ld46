@@ -41,42 +41,74 @@ label ted1:
 label ted2:
   scene bg manor
   show ted
-  ted "Hey, %(player_name)s!"
-  protag "Hi, Ted, I really enoyed your [recent broadcast]"
-  ted "Oh you saw it?"
-  ted "How goes the garden?"
+  ted "Hi, %(player_name)s, how are you this fine morning?"
+  protag "Hi Ted, I’m great! I saw you on TV last night, you sounded great."
+  hide ted
+  show ted happy
+  ted "Thank you!"
+  hide ted happy
+  show ted
+  ted "What are you planting here?"
   menu:
     "Answer with Scientific Terms":
-      protag "My Answer. SCIENCEY Answer"
-    "Describe Terms in plain english":
-      protag "Easy to understand verison"
-  ted "You're pretty smart, you know that"
-  protag "Who, me? (is very modest)"
+      protag "I’m putting in some lilium regale bulbs to propagate near the fountain."
+    "Describe Terms in Plain English":
+      protag " I’m transplanting some lillies from outside to these beds next to the fountain."
+  hide ted
+  show ted flirt
+  ted "You’re so smart. Your passion for the plants is evident when you speak."
+  protag "Thank you Ted, I just love what I do."
+  hide ted flirt
+  show ted happy
   ted "What is your favorte color?"
   menu:
     "Green":
       $ favoriteColor = "green"
+      $ romanceTed = romanceTed + 1
+      ted "I'll make sure to wear a %(favoriteColor)s colored tie on the next broadcast"
     "Blue":
       $ favoriteColor = "blue"
+      $ romanceTed = romanceTed + 1
+      ted "I'll make sure to wear a %(favoriteColor)s colored tie on the next broadcast"
     "Red":
       $ favoriteColor = "red"
+      $ romanceTed = romanceTed + 1
+      ted "I'll make sure to wear a %(favoriteColor)s colored tie on the next broadcast"
     "Purple":
       $ favoriteColor = "purple"
+      $ romanceTed = romanceTed + 1
+      ted "I'll make sure to wear a %(favoriteColor)s colored tie on the next broadcast"
     "Pink":
       $ favoriteColor = "pink"
-  ted "I'll make sure to wear a %(favoriteColor)s colored tie on the next broadcast"
-  protag "Where you from?"
-  ted "Ted is from Oakglen. He left for college in NY. He asks ?"
-  protag "An Answer"
-  "THERE IS A MOMENT"
-  if weekTwoTed == True:
-    menu:
-      "Shall I flirt?"
-      "Yes":
-        $ weekTwoFlirt = True
-      "No":
-        $ weekTwoFlirt = False
-  ted "Well, lovely chatting, but I have to go. See you later!"
+      $ romanceTed = romanceTed + 1
+      ted "I'll make sure to wear a %(favoriteColor)s colored tie on the next broadcast"
+    "None":
+      $ romanceTed = romanceTed - 1
+      hide ted happy
+      show ted sad
+      $ favoriteColor = False
+      ted "Oh, well then free for all, I guess."
+
+  protag "Where you from, Ted?"
+  hide ted sad
+  show ted
+  ted "Here in Oakglen. I left to go to college in Pennsylvania but I ended up back here. Something just waiting to be discovered keeps me here. Why did you come here?"
+  protag "I was really interested in the work. The blend of a historic house and a garden that needs my help? It was too much to pass up."
+  
+  if favoriteColor == False:
+    hide ted
+    show ted happy
+    ted "Well it was nice seeing you, I should head out though!"
+  else:
+    hide ted
+    show ted flirt
+    ted "I love your passion in what you do."
+    "We stand there for a few moments in silence. Oddly enough, it wans't an unconfortable silence. I find myself admiring Ted's fine eyes."
+    ted "Well, as much as I would love to stay here and chat, I really should be going to work."
+    protag "Yeah . . . me too."
+    hide ted flirt
+    show ted happy
+    ted "See you later,  %(player_name)s."
   if weekTwoTed:
     jump startWeek2AfterTalk
   jump endWeek2AfterTalk

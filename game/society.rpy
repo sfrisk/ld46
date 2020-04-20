@@ -51,42 +51,55 @@ label society2:
   $ societyVisits = 2
   scene bg parlor
   show prez
-  "WEEK TWO OF VISITING LUCINDA"
-  prez "Lucinda apologies for previous week after protag call about courtyard find."
-  if ghost == False:
-    jump society2terrarium
+  "I arrive at the Garden Society at the time Lucinda and I agree about."
+  prez "Thank you for stopping by. I’m glad you called about what you found in the courtyard."
+  if ghost == True:
+    jump society2ghost
   else:
-    menu:
-      "Tell Lucinda about Terrarium":
-        jump society2terrarium
-      "Tell Lucinda about Renalda’s ghost.":
-        jump society2ghost
+    jump society2terrarium
 
 label society2terrarium:
-  protag "I found some plantssss. a Terrarium!"
-  prez "Lucinda is shocked. Renalda invented them."
-  "Protag gets the terrarium key."
+  protag "I found a strange terrarium built into the back wall of the courtyard. It looks like there’s something growing in it but I can’t tell right now what it is."
+  prez  "I’m not surprised. Renalda was constantly cross breeding things to come up with new varieties."
+  hide prez
+  show prez happy
+  prez "She would cross breed herbs to make them more potent in healing applications. Her aloe is amazing on everyone from rashes to burns."
+  hide prez happy
+  show prez
+  prez "Here, she used to make her own contraptions. I think this might open that case for you."
+  "Lucy hands me a an old looking key that looks like it might fit the terrarium."
+  protag "Thank you, Lucy!"
   $ terrariumKey = True
   jump society2end
 
 label society2ghost:
-  protag "GHOSTS. I SEE DEAD PEOPLE"
-  prez "Lucinda is shocked but thinks she can help. Lucinda produces letters Renalda wrote to the estate owners she modeled her fountains after. "
+  prez "But you weren’t making any sense. Tell me again, what got you so emotional?"
+  protag "I saw Renalda’s ghost in the courtyard!"
+  protag "She lead me to the valve where the fountain lines ran and then there was a glass case set in the wall."
+  prez "Holy smokes! You SAW HER?"
+  prez "This...I...I can’t believe it. The fountains huh? I think I can help."
+  prez "I have some letter collections of hers that she donated to us before her death. She modeled that fountain after one she saw in the 20’s in France. The letters and translations are in the file."
+  "Lucy gives me a statsh of letters. Reading through it, I discover that Renalda was having an affair with a local pastor. She refused to give up her faith in the Goddess and so the relationship ended and she became a recluse."
+  "My purusal of the letters is interrupted by a question from Lucy." 
   $ personalLetters = True
   jump society2end
 
 label society2end:
-  prez "Lucinda wants to know what Douglas knows about the courtyard"
+  hide prez
+  show prez annoyed
+  prez "Tell me, what does Douglas know about the courtyard?"
   menu:
-    "Have not seen":
-      prez "ah, i would have expected him to be around"
-    "Truth":
-      protag "I speak truth!"
     "Lie":
-      protag "I speak LIES!"
-  prez "Lucinda asks if the GS can be of any more assistance."
-  protag "Protag asks if Renalda or the GS ever get B&B plants."
-  prez "Lucinda says no. They grow their own from seeds."
+      protag "I haven’t seen him lately. Why are you so against him?"
+    "Truth":
+      protag "He’s my boss. We spoke about the courtyard this morning. Why are you so against him?"
+  prez "He fought us in court over Renalda’s estate for 3 years. He nearly bankrupted us with the court battle. He’s after something."
+  protag "Lucinda, was Renalda a witch?"
+  hide prez annoyed
+  show prez
+  "Lucy seems surprised by the question."
+  prez " . . . yes."
+  "Things were a bit awkward after that, and I had work to do. After a few weird moments, I waved goodbye to Lucy, promising to talk to her later."
   jump travel
 
 label society3:

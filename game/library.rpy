@@ -39,35 +39,54 @@ label library2:
   show librarian
   if libraryVisits == 1:
     librarian "Welcome to the Oakglen Public Library! How can I direct you?"
-    protag "Hello, I’m looking for some information on Elmhearst Manor."
+    protag "Hello, I’m looking for historical blueprints of Elmhearst Manor."
   else:
-    protag "Protag greets Libby. Asks to keep blueprints longer."
-    librarian "Libby asks about garden"
+    protag "Hi Libby! Do you think I could keep the blueprints of the house a little longer? I’m working on figuring out some changes and it helps to see the original design."
+    librarian "Keep them as long as you want!"
+  librarian "What kinds of changes are you looking at?"
   menu:
     "Terrarium":
       $ photoAlbum = True
+      jump library2Terrarium
     "Strange Plumbing":
       $ fountainBook = True
-  if photoAlbum == True:
-    librarian "Libby remarks that Grimalli liked fountains. Recommends book on art nouveau style gardens and water features."
-    "Check out book about antique indoor fountains."
-  else:
-    librarian "Libby remarks on odd art nouveau photos of Renalda’s house the library has."
-    "Check out a photo album of a party thrown by Renalda Grimalli for New Years 1932."
-  librarian "Libby asks if anyone in town has caught Protag eye yet."
-  "WHO ASKS SOMETHING LIKE THIS. OH GOD DECISIONS."
+      jump library2Plumbing
+
+label library2Terrarium:
+  protag "There’s a strange terrarium looking glass case built into the back wall. I can’t get it open and I can’t tell what it used to be."
+  librarian "I believe the library has a photo album of a Chamber of Commerce Party she hosted at her estate one night in 1932. Here you can check it out with the blueprints."
+  "I go with Libby to the front desk to check out the photo album."
+  if libraryVisits == 1:
+    "While I'm there, I also check out the blueprints"
+  jump library2ending
+
+label library2Plumbing:
+  protag "There’s a strange plumbing value that comes out of an access door that looks like a mess of pipes. I can’t tell what they were trying to do with it."
+  librarian "ou know, Miss Grimalli used to be completely mesmerized by these french fountains at an estate she stayed at in the 30’s."
+  librarian "I think they were featured in this book about Art Nouveau water features. It’s in right now."
+  "I go with Libby to the front desk to check out the Art Nouveau book."
+  if libraryVisits == 1:
+    "While I'm there, I also check out the blueprints"
+  jump library2ending
+
+label library2ending:
+  hide librarian
+  show librarian happy
+  "As she is checking out my books, Libby smiles at me. I find myself distrusting that smile."
+  librarian "So you’ve been here a couple weeks now. Has anyone caught your eye?"
   menu:
     "Run away":
-      "Nope nope nope, I can't answer that"
-      protag "*stamers*"
-      "I run away"
-      jump travel
+      "Wut? Who ASKS something like that?"
+      protag "You know, I really gotta run. Bye Libby!"
     "Ted":
-      "[do we wanna track this Ted approval?]"
+      $ romanceTed = romanceTed + 1
+      "I think Ted is really sweet."
     "Molly":
-      "[do we wanna track this Molly approval?]"
-  librarian "Libby chuckles but approves and protag makes a fast exit."
-  hide librarian
+      $ romanceMolly = romanceMolly + 1
+      " I think Molly is really nice."
+  librarian "*chuckles*"
+  "I decide to make a hasty retreat before she asks anything else"
+  hide librarian happy
   jump travel
 
 label library3:
