@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/society.rpy", line 125: expected statement.
-    how prez annoyed
-                    ^
+File "game/script.rpy", line 90: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    xalign 0.75
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Apr 20 17:57:25 2020
+Mon Apr 20 18:13:06 2020

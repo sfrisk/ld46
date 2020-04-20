@@ -80,25 +80,20 @@ label start:
     
     "We entered the couryard of Elmhearst where a handful of building residences were already waiting for the meeing to start"
     
-    show ted
+    show ted:
+      xalign 0.15
+      yalign 1.0
     "One was a man wearing a well fitted suit.  I think I've seen hi on TV before"
     hide ted
 
-    show molly
+    show molly:
+      xalign 0.85
+      yalign 1.0
     "A woman sat in the corner, a book in her hand. She looked up as my douglas and I came into the room."
     hide molly
 
     show douglas
     douglas "Lastly, I wanted to introduce you to %(player_name)s, our new building manager. %(player_name)s comes to us from a rather famous estate museum and gardens. I hope you will all make %(object_pronoun)s feel welcome at Elmhearst."
-    hide douglas
-
-    neighbor1 "Hey"
-    ted "Hey there"
-    neighbor2 "Hi"
-    show molly
-    molly "Greetings!"
-    hide molly
-
     douglas "Why don’t you tell us what you’d like to see with the courtyard?"
     hide douglas
 
