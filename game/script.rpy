@@ -4,7 +4,7 @@
 # name of the character.
 
 define protag = Character("player_name", color="#6ca7c3", dynamic=True)
-define boss = Character("Boss")
+define douglas = Character("Douglas")
 define ted = Character("Ted")
 define molly = Character("Molly")
 define neighbor1 = Character("Neighbor")
@@ -67,21 +67,19 @@ label start:
 
     scene bg exteriorElmherst
 
-    show boss
-    show protag
-    boss "Welcome to The Elmhearst." 
-    boss "This manor used to be the home of a reclusive heiress, Renalda Grimalli. "
-    boss "Renalda had few visitors but letters belonging to her showed that she used to be known for the beauty of the courtyard. It was said to be a place where she would hold strange rituals. "
-    boss "Rumors about the things she used to do here have tempted ghost hunters and occult nuts to comb over the grounds for years."
-    boss "No one’s ever found anything but that never stopped them. At least until I got the fences mended."
+    show douglas
+    douglas "Welcome to The Elmhearst." 
+    douglas "This manor used to be the home of a reclusive heiress, Renalda Grimalli. "
+    douglas "Renalda had few visitors but letters belonging to her showed that she used to be known for the beauty of the courtyard. It was said to be a place where she would hold strange rituals. "
+    douglas "Rumors about the things she used to do here have tempted ghost hunters and occult nuts to comb over the grounds for years."
+    douglas "No one’s ever found anything but that never stopped them. At least until I got the fences mended."
 
     scene bg interiorElmherst
-    show boss
-    show protag
+    show douglas
 
-    boss "I’ve spent a small fortune to turn this old estate into luxurious apartments."
-    boss "My previous building manager did what they could with the grounds as you can tell but the inner garden in the courtyard was just too much for them. Everything they tried just withered. "
-    boss "I can’t have the entire heart of the manor look like a scraggly dying mess. The residents have tried, I’ve tried. I’m at my wit’s end. Just...keep it alive."
+    douglas "I’ve spent a small fortune to turn this old estate into luxurious apartments."
+    douglas "My previous building manager did what they could with the grounds as you can tell but the inner garden in the courtyard was just too much for them. Everything they tried just withered. "
+    douglas "I can’t have the entire heart of the manor look like a scraggly dying mess. The residents have tried, I’ve tried. I’m at my wit’s end. Just...keep it alive."
     
     scene bg commonRoom
     "We entered the couryard of Elmhearst where a handful of building residences were already waiting for the meeing to start"
@@ -91,12 +89,12 @@ label start:
     hide ted
 
     show molly
-    "A woman sat in the corner, a book in her hand. She looked up as my boss and I came into the room."
+    "A woman sat in the corner, a book in her hand. She looked up as my douglas and I came into the room."
     hide molly
 
-    show boss
-    boss "Lastly, I wanted to introduce you to %(player_name)s, our new building manager. %(player_name)s comes to us from a rather famous estate museum and gardens. I hope you will all make %(object_pronoun)s feel welcome at Elmhearst."
-    hide boss
+    show douglas
+    douglas "Lastly, I wanted to introduce you to %(player_name)s, our new building manager. %(player_name)s comes to us from a rather famous estate museum and gardens. I hope you will all make %(object_pronoun)s feel welcome at Elmhearst."
+    hide douglas
 
     neighbor1 "Hey"
     ted "Hey there"
@@ -105,18 +103,19 @@ label start:
     molly "Greetings!"
     hide molly
 
-    boss "Why don’t you tell us what you’d like to see with the courtyard?"
-    hide boss
+    douglas "Why don’t you tell us what you’d like to see with the courtyard?"
+    hide douglas
 
-    show protag
     protag "Thank you for the welcome! As for the garden, I haven’t had a good chance to really see what’s in there yet, but what do you want to see in there?"
-    hide protag
 
     show ted
     ted "I’d like something to be a real centerpiece. Something with a dramatic effect when you walk in."
 
     menu:
         "That sounds awesome!":
+            hide ted
+            show ted happy
+            ted "I know it's a good idea"
             $ friendshipTed = friendshipTed + 1
             $ romanceTed = romanceTed + 2
         "That sounds interesting!":
@@ -124,11 +123,9 @@ label start:
         "That sounds out of place for this space.":
             $ friendshipTed = friendshipTed - 2
             $ romanceTed = romanceTed - 2
-    hide ted
+    hide ted happy
 
-    show protag
     protag "How about you? What do you want to see?"
-    hide protag
 
     show molly
     molly "Well, I’d like to see it as a functional space. Where you can sit, and read or have a nice cup of tea in the morning."
@@ -151,7 +148,7 @@ label start:
 
     hide molly
    
-    show Boss
-    boss "I’m sure you’ll have plenty of ideas once you really get your hands in there."
+    show douglas
+    douglas "I’m sure you’ll have plenty of ideas once you really get your hands in there."
 
     jump startWeek1

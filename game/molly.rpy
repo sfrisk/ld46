@@ -20,9 +20,9 @@ label molly1:
   molly "what are your dreams?"
   menu:
     "Horticulturist":
-      $ isHorticulturist = true
+      $ isHorticulturist = True
     "Apothacary/Herbalist":
-      $ isHorticulturist = false
+      $ isHorticulturist = False
   hide molly
   show molly happy
   molly "Molly Answer Happy"

@@ -1,24 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/travel.rpy", line 16, in script
-    if week 2 and haveGardenCard == False:
-SyntaxError: invalid syntax (travel.rpy, line 16)
+  File "game/molly.rpy", line 23, in script
+    $ isHorticulturist = true
+  File "game/molly.rpy", line 23, in <module>
+    $ isHorticulturist = true
+NameError: name 'true' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/travel.rpy", line 16, in script
-    if week 2 and haveGardenCard == False:
-  File "/Users/guri/Projects/renpy/renpy/ast.py", line 1832, in execute
-    if renpy.python.py_eval(condition):
-  File "/Users/guri/Projects/renpy/renpy/python.py", line 2057, in py_eval
-    code = py_compile(code, 'eval')
-  File "/Users/guri/Projects/renpy/renpy/python.py", line 692, in py_compile
-    raise e
-SyntaxError: invalid syntax (travel.rpy, line 16)
+  File "game/molly.rpy", line 23, in script
+    $ isHorticulturist = true
+  File "/Users/guri/Projects/renpy/renpy/ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/guri/Projects/renpy/renpy/python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/molly.rpy", line 23, in <module>
+    $ isHorticulturist = true
+NameError: name 'true' is not defined
 
 Darwin-19.3.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 LD46 1.0
-Sun Apr 19 19:26:15 2020
+Mon Apr 20 11:43:24 2020
