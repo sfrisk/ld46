@@ -8,7 +8,9 @@ label endWeek1:
   if societyVisits == 1:
     $ ghost = True
     "Protag reads letters in courtyard."
+    show ghost
     "Renalda’s ghost appears then disappears behind debris"
+    hide ghost
     "Find a strange valve with pipes heading deeper towards back wall."
     "Try to turn on valve. It is stuck."
     "Follows pipes to a hidden terrarium built into wall behind some debris."

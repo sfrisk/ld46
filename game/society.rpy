@@ -1,6 +1,6 @@
 label society1:
   $ societyVisits = 1
-  scene gardenSociety
+  scene bg parlor
   show prez
   protag "Hi, I'm %(player_name)s, we spoke on the phone? Thank you for taking the time to meet with me."
   prez "Hello, I’m Lucinda Payne, President of the Oakglen Garden Society."
@@ -49,7 +49,7 @@ label society1:
 
 label society2:
   $ societyVisits = 2
-  scene gardenSociety
+  scene bg parlor
   show prez
   "WEEK TWO OF VISITING LUCINDA"
   prez "Lucinda apologies for previous week after protag call about courtyard find."
@@ -91,7 +91,7 @@ label society2end:
 
 label society3:
   $ societyVisits = 3
-  scene gardenSociety
+  scene bg parlor
   show prez
   "WEEK THREE OF VISITING LUCINDA"
   hide prez
