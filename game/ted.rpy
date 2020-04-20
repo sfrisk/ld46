@@ -5,10 +5,10 @@ label ted1:
   protag "Yeah, it’s been a good day for gardening so far."
   ted "You have your work cut out for you here."
   menu:
-    "It’s not so bad. It just needs a little care.":
-      $ jibberish = True
-    "It’s a shame it was let go for so long.":
-      $ jiberish = False
+    "Hopeful":
+      "It’s not so bad. It just needs a little care.":
+    "Sad":
+      "It’s a shame it was let go for so long.":
   ted "Ah, yes, well there was a protracted legal battle after Miss Grimalli’s death. Problems with the will have left it tied up in probate court for years. "
   ted "Then the taxes lapsed and the next thing you know, the estate had okayed the sale of the property based on an older copy of the will that left everything to a blind trust."
   ted "That is until Douglas Beckham showed up in town. Next thing we knew, he had permits for restoration and he was pitching for it to be on the National Register of Historic Places. "
@@ -29,11 +29,18 @@ label ted1:
       protag "How do you like living at Elmhearst?"
   ted "The Manor is gorgeous and the apartments are so polished. Really, I couldn’t wait for them to finish the courtyard, it was just the place to be. How do you see yourself here at the Elmhearst?"
   menu:
-    "Romantic Answer":
+    "Romantic":
+      $ romanceTed = romanceTed + 1
       protag "I hope to be here for a long time."
-    "Pragmatic Answer":
+      hide ted
+      show ted flirt
+      ted "I would like that"
+      hide ted flirt
+      show ted
+    "Pragmatic":
       protag "It was just too good an opportunity to pass up professionally."
-  "[FINISH CONVO]"
+      ted "Of course."
+  ted "Well, I really should get to work. It was nice chatting!"
   hide ted
   jump molly1
 
