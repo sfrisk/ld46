@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/society.rpy", line 58: expected ':' not found.
-    else
-        ^
+File "game/molly.rpy", line 64: reached end of line when expecting ':'.
+    if societyVisits == 0
+                         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Apr 20 19:26:11 2020
+Mon Apr 20 20:26:23 2020

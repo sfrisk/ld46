@@ -6,7 +6,7 @@ label travel:
       jump endWeek2
     if week == 3:
       jump endWeek3
-  scene bg townMap
+  scene bg manor
   if week == 1 and haveGardenCard == False:
     "I guess I could check out the library?"
     jump library1
@@ -14,7 +14,7 @@ label travel:
     "Cam did mention a Garden Society. [some ideas about garden society]"
     "Or I could go to the library [some ideas about library stuff]"
   if week == 2 and haveGardenCard == False:
-    "Molly gave me some info about a Gardening Society. I should check them out."
+    "Molly gave me some info about a Gardening Society. Maybe I should check them out?"
   $ errands = 0
   menu:
     "Where do I want to go ?"
@@ -26,6 +26,7 @@ label travel:
       if week == 3:
         jump library3
     "Garden Society":
+      "I call the Garden Society to find out a good time to visit."
       if week == 1:
         jump society1
       if week == 2:

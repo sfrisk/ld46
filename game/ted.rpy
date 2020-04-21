@@ -1,14 +1,16 @@
 label ted1:
   scene bg manor
+  "As Douglas walked off, I found myself in the courtyard, wondering what to do."
   show ted
+  "Lucky for me, I didn't have to make a decision, since Ted immediately came over to talk to me."
   ted "Good morning, %(player_name)s! It’s a lovely day, isn’t it?"
   protag "Yeah, it’s been a good day for gardening so far."
   ted "You have your work cut out for you here."
   menu:
     "Hopeful":
-      "It’s not so bad. It just needs a little care.":
+      "It’s not so bad. It just needs a little care."
     "Sad":
-      "It’s a shame it was let go for so long.":
+      "It’s a shame it was let go for so long."
   ted "Ah, yes, well there was a protracted legal battle after Miss Grimalli’s death. Problems with the will have left it tied up in probate court for years. "
   ted "Then the taxes lapsed and the next thing you know, the estate had okayed the sale of the property based on an older copy of the will that left everything to a blind trust."
   ted "That is until Douglas Beckham showed up in town. Next thing we knew, he had permits for restoration and he was pitching for it to be on the National Register of Historic Places. "
