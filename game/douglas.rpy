@@ -62,32 +62,39 @@ label douglas2:
 label douglas3:
   scene bg manor
   show douglas
-  douglas "Hey protag. What's up with this lily?"
+  douglas "Hey, what’s going on with that weird flower in the back there?"
   menu:
     "Renalda's work":
-      protag "It was something Renalda was working on"
+      protag "It’s something I think Renalda was breeding a special flower when she died."
     "Rare discovery":
-      protag "It's some sort of rare variety I've never seen before"
-  douglas "Tell me more, tell me more"
-  if ghost == True:
+      protag " It’s a rare flower I’ve never seen before."
+  douglas "What’s that glass case it’s in?"
+  if terrariumKey == True:
     jump douglas3ghost
   jump douglas3noGhost
 
 label douglas3ghost:
-  protag "Protag shows him altar and book."
+  protag "I throw the lever and show him the alter"
   hide douglas
   show douglas mad
-  douglas "Douglas is angry, reveals Renalda is aunt. Family wants to hide her pagan ties to ensure a positive legacy."
-  protag "Protag is defiant and supportive of Renalda. Tells Douglas that she gave up a child to save family shame."
-  douglas "TELL ME MORE"
-  protag "STALLS FOR TIME. NEED MORE INFO"
+  douglas "What in the name of God is that?! Is that an altar?"
+  douglas "*shakes head*"
+  douglas "Renalda was my aunt. We’re trying to make sure she is remembered for the right reasons. She played with this witchcraft nonsense until she died."
+  protag "It’s not nonsense. She believed. It’s not for us to judge her for that."
+  hide douglas mad
+  show douglas
+  douglas "I suppose. Please excuse me."
+  "Well that was awkward. Guess I'll go visit Cam for some supplies."
   jump shop3
 
 label douglas3noGhost:
-  protag "Protag shows him hot house and fountains. Tell him he needs a new pump."
+  protag "I think it’s a hot house and fountains, based on some contemporary installations. It needs a new pump though. I think Cam can do the work but I wanted to clear it with you."
   hide douglas
   show douglas happy
-  douglas "Douglas is happy, reveals Renalda is aunt. Family wants to assure her legacy."
-  protag "Protag is happy to help but flower is not blooming yet."
-  douglas "Douglas thinks he might have an answer and says he will be back."
+  douglas "Of course! Renalda was my aunt and we just want to ensure her legacy is preserved as a lady of society."
+  protag " That’s great! I just hope I can get the flower to bloom!"
+  douglas "I might have an answer. I’ll be right back."
+  hide douglas happy
+  ". . ."
+  "I wait a few moments, but Douglas doesn't return.  I decide he can call me if he needs me, and head to Cam for some supplies."
   jump shop3

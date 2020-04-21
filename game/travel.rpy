@@ -11,8 +11,8 @@ label travel:
     "I guess I could check out the library?"
     jump library1
   if week == 1 and haveGardenCard == True:
-    "Cam did mention a Garden Society. [some ideas about garden society]"
-    "Or I could go to the library [some ideas about library stuff]"
+    "Cam did mention a Garden Society."
+    "Or I could go to the library and try and find the original blueprints in the archive."
   if week == 2 and haveGardenCard == False:
     "Molly gave me some info about a Gardening Society. Maybe I should check them out?"
   $ errands = 0

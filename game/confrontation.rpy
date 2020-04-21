@@ -39,9 +39,9 @@ label confrontation:
       $ romanceTed = -10
       $ romanceMolly = -10
 
-  if romanceMolly > 5:
+  if romanceMolly > 2:
     jump romanceMolly
-  if romanceTed > 5:
+  if romanceTed > 2:
     jump romanceTed
   jump noRomance
 
