@@ -103,10 +103,10 @@ label shop3:
   show cam
   protag "Hey cam! What do you have for modern pump systems?"
   cam "Cam says can have one ordered to fit. Might need to come see the setup so they get the right connections."
-  protag "That works, you're welcome to come over to Elmhearst whenever."
+  protag "That works, you're welcome to come back over to Elmhearst with me after this."
   hide cam
   show cam happy
-  cam "That's great! I've always dreamed of seeing Elmhearst up close."
+  cam "That's great! I've always dreamed of seeing Elmhearst up close. I was just about to close the shop for my break anyway."
   protag "You have? Why didn't you apply for the building super job?"
   hide cam happy
   show cam sad
@@ -131,9 +131,9 @@ label shop3:
   hide cam happy
   show cam
   cam "Can do! Here ya go!"
-  protag "Thanks, Cam, have a nice day!"
+  protag "Thanks, Cam. Shall we go?"
   hide cam
   show cam happy
-  cam "Thanks you too!"
+  cam "Yes! I can't wait to see the courtyard you've told me so much about."
   hide cam happy
-  jump travel
+  jump confrontation
