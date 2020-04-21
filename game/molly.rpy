@@ -40,9 +40,12 @@ label molly1:
   jump shop1
 
 label molly2:
-  scene bg manor
+  if night == True:
+    scene bg manor night
+  else:
+    scene bg manor
   show molly
-  protag "Hi Molly, how are you this morning?"
+  protag "Hi Molly, how are you?"
   hide molly
   show molly happy
   molly "I’m great thank you! How are you adjusting to the new digs?"

@@ -79,8 +79,6 @@ label society2ghost:
   prez "Holy smokes! You SAW HER?"
   prez "This...I...I can’t believe it. The fountains huh? I think I can help."
   prez "I have some letter collections of hers that she donated to us before her death. She modeled that fountain after one she saw in the 20’s in France. The letters and translations are in the file."
-  "Lucy gives me a statsh of letters. Reading through it, I discover that Renalda was having an affair with a local pastor. She refused to give up her faith in the Goddess and so the relationship ended and she became a recluse."
-  "My purusal of the letters is interrupted by a question from Lucy." 
   $ personalLetters = True
   jump society2end
 

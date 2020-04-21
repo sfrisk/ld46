@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/molly.rpy", line 64: reached end of line when expecting ':'.
-    if societyVisits == 0
-                         ^
+File "game/week-two.rpy", line 27: expected ':' not found.
+    else if personalLetters == True:
+         ^
+
+File "game/week-two.rpy", line 31: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Apr 20 20:26:23 2020
+Mon Apr 20 20:42:08 2020

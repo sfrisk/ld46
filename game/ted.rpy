@@ -1,4 +1,5 @@
 label ted1:
+
   scene bg manor
   "As Douglas walked off, I found myself in the courtyard, wondering what to do."
   show ted
@@ -48,7 +49,10 @@ label ted1:
 
 
 label ted2:
-  scene bg manor
+  if night == True:
+    scene bg manor night
+  else:
+    scene bg manor
   show ted
   ted "Hi, %(player_name)s, how are you this fine morning?"
   protag "Hi Ted, I’m great! I saw you on TV last night, you sounded great."
